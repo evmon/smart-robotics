@@ -18,15 +18,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
-
+# 1446089e270f92ed7793581b8bd6d8478b6f8f27
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '7ekh%x+izr*b*f719e#&8q4yx!0bvaq##-q@y7-$uq(%dx5hlo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -76,14 +77,14 @@ WSGI_APPLICATION = 'smartrobot.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smart$smartrobotics',
-        'USER': 'smart',
-        'PASSWORD': 'evmonrobot',
-        'HOST': 'smart.mysql.pythonanywhere-services.com',
-        'PORT': '8080',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'smart$smartrobotics',
+        # 'USER': 'smart',
+        # 'PASSWORD': 'evmonrobot',
+        # 'HOST': 'smart.mysql.pythonanywhere-services.com',
+        # 'PORT': '3306',
     }
 }
 
@@ -126,3 +127,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
