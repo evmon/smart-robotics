@@ -5,12 +5,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
-app_name = 'shop'
+app_name = 'robotics'
 # handler404 = 'show_404'
 
 urlpatterns = [
 
     url(r'^$', TemplateView.as_view(template_name="robotics/base.html"), name='home'),
+    url(r'^about-us/$', TemplateView.as_view(template_name="robotics/about-us.html"), name='about-us'),
+    url(r'^contact-us/$', TemplateView.as_view(template_name="robotics/contact-us.html"), name='contact-us'),
         
 ]
 

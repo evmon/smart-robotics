@@ -14,25 +14,21 @@
 
 <link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="all" />
 
-{# <script type="text/javascript" src="jquery-1.7.1.min.js"></script> #}
 <script type="text/javascript" src="{% static 'jquery.slidertron-1.1.js' %}"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Archivo+Narrow:400,700" rel="stylesheet" type="text/css" />
-{# <link href="robotics/css/default.css" rel="stylesheet" type="text/css" media="all" /> #}
-
 </head>
 <body>
 <div id="header-wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">Smart Group</a></h1>
+			<h1><a href="{%url 'robotics:home' %}">Smart Group</a></h1>
 		</div>
 		<div id="menu">
 			<ul>
-				<li class="first active"><a class="buttonText" id="button2" href="#" accesskey="1" title="">Homepage</a></li>
+				<li class="first active"><a class="buttonText" id="button2" href="{%url 'robotics:home' %}" accesskey="1" title="">Homepage</a></li>
 				<li><a type="button" href="#" accesskey="2" title="">Control</a></li>
-				<li><a href="#" accesskey="3" title="">About Us</a></li>
-				<li><a href="#" accesskey="4" title="">Careers</a></li>
-				<li><a href="#" accesskey="5" title="">Contact Us</a></li>
+				<li><a href="{% url 'robotics:about-us' %}" accesskey="3" title="">About Us</a></li>
+				<li><a href="{% url 'robotics:contact-us' %}" accesskey="4" title="">Contact Us</a></li>
 				
 			</ul>
 		</div>
@@ -76,49 +72,10 @@
 		});
 	</script> 
 </div>
-<div id="wrapper">
-	<div id="page" class="container">
-		<div id="content"> <img src="{% static 'images/pic08.jpg' %}" width="235" height="235" alt="" />
-			<h2>Nulla luctus eleifend</h2>
-			<p>This is <strong>Refreshen</strong>, a free, fully standards-compliant CSS template designed by <a href="#">FCT</a>.   The photos in this template are from  Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
-		</div>
-		<div id="sidebar">
-			<div>
-				<h2>Categories</h2>
-				<ul class="style1">
-					<li class="first">
-						<p><a href="#">Ipsum ante vivamus semper faucibus varius. Nam risus nibh, commodo vulputate.</a></p>
-						<span class="posted">8 hours ago</span> </li>
-					<li>
-						<p><a href="#">Sed amet consequat lorem ipsum dolor sit amet blandit feugiat lorem ipsum sed ante nibh.</a></p>
-						<span class="posted">1 day ago</span> </li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div id="featured" class="container">
-		<h2 class="title">Praesent mattis condimentum</h2>
-		<div id="fbox1"> <img src="{% static 'images/pic04.jpg' %}" width="235" height="235" alt="" />
-			<h2>Evheniia Monastyrna</h2>
-			<p>In posuere eleifend quisque semper augue mattis wisi maecenas ligula.</p>
-		</div>
-		<div id="fbox2"> <img src="{% static 'images/pic05.jpg' %}" width="235" height="235" alt="" />
-			<h2>Galina Neschadina</h2>
-			<p>Maecenas ligula. Pellentesque viverra vulputate Aliquam erat volutpat.</p>
-		</div>
-		<div id="fbox3"> <img src="{% static 'images/pic06.jpg' %}" width="235" height="235" alt="" />
-			<h2>Illya Bereza</h2>
-			<p>Donec fermentum nibh in augue a lacus at urna congue rutrum.</p>
-		</div>
-		<div id="fbox4"> <img src="{% static 'images/pic07.png' %}" width="235" height="235" alt="" />
-			<h2>Alexey Repkin</h2>
-			<p>Suspendisse sit amet tellus eros bibendum volutpat nulla.</p>
-		</div>
-	</div>
-</div>
+
 {% endblock content %}
 <div id="footer">
-	<p>All rights reserved.  Photos by Fotograph <a href="https://vk.com/donntu_fknt">Group</a>.</p>
+	<p>All rights reserved © 2017.  Photos by <a href="https://vk.com/donntu_fknt">Group</a>.</p>
 </div>
 </body>
 </html>
