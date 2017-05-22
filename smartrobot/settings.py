@@ -83,7 +83,7 @@ DATABASES = {
         'USER': 'smart',
         'PASSWORD': 'evmonrobot',
         'HOST': 'smart.mysql.pythonanywhere-services.com',
-        'PORT': '8080',
+        'PORT': '3306',
     }
 }
 
@@ -126,3 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
