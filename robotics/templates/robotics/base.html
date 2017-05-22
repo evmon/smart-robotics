@@ -1,15 +1,23 @@
+{% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title></title>
+<title>Smart Robotics</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="jquery.slidertron-1.1.js"></script>
+
+
+<script src="{% static 'jquery-1.7.1.min.js' %}"></script>
+
+<link href="{% static 'css/default.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+{# <script type="text/javascript" src="jquery-1.7.1.min.js"></script> #}
+<script type="text/javascript" src="{% static 'jquery.slidertron-1.1.js' %}"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Archivo+Narrow:400,700" rel="stylesheet" type="text/css" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+{# <link href="robotics/css/default.css" rel="stylesheet" type="text/css" media="all" /> #}
 
 </head>
 <body>
@@ -30,14 +38,21 @@
 		</div>
 	</div>
 </div>
+{% block content %}
+	
+
 <div id="banner">
+<div id="featured" style="padding: 0px 0px;" class="container">
+				<h2 class="title">Labor of love</h2>
+			</div>
 	<div id="slider">
 		<div class="viewer">
 			<div class="reel">
+			
 				<div class="slide">
-					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-1">Full story ...</a> <img src="images/pic01.jpg" alt="" /> </div>
+					<a class="link" href="#">Full story ...</a> <img src="{% static 'images/pic01.jpg' %}" alt="hgh" /> </div>
 				<div class="slide">
-					<a class="link" href="http://nodethirtythree.com/#slidertron-slide-2">Full story ...</a> <img src="images/pic02.jpg" alt="" /> </div>
+					<a class="link" href="#">Full story ...</a> <img src="{% static 'images/pic02.jpg' %}" alt="" /> </div>
 			</div>
 		</div>
 		<div class="indicator">
@@ -63,7 +78,7 @@
 </div>
 <div id="wrapper">
 	<div id="page" class="container">
-		<div id="content"> <img src="images/pic08.jpg" width="235" height="235" alt="" />
+		<div id="content"> <img src="{% static 'images/pic08.jpg' %}" width="235" height="235" alt="" />
 			<h2>Nulla luctus eleifend</h2>
 			<p>This is <strong>Refreshen</strong>, a free, fully standards-compliant CSS template designed by <a href="#">FCT</a>.   The photos in this template are from  Fotogrph. This free template is released under a Creative Commons Attributions 3.0 license, so you are pretty much free to do whatever you want with it (even use it commercially) provided you keep the links in the footer intact. Aside from that, have fun with it :)</p>
 		</div>
@@ -83,26 +98,27 @@
 	</div>
 	<div id="featured" class="container">
 		<h2 class="title">Praesent mattis condimentum</h2>
-		<div id="fbox1"> <img src="images/pic04.jpg" width="235" height="235" alt="" />
-			<h2>Fusce ultrices fringilla</h2>
+		<div id="fbox1"> <img src="{% static 'images/pic04.jpg' %}" width="235" height="235" alt="" />
+			<h2>Evheniia Monastyrna</h2>
 			<p>In posuere eleifend quisque semper augue mattis wisi maecenas ligula.</p>
 		</div>
-		<div id="fbox2"> <img src="images/pic05.jpg" width="235" height="235" alt="" />
-			<h2>Fusce ultrices fringilla</h2>
+		<div id="fbox2"> <img src="{% static 'images/pic05.jpg' %}" width="235" height="235" alt="" />
+			<h2>Galina Neschadina</h2>
 			<p>Maecenas ligula. Pellentesque viverra vulputate Aliquam erat volutpat.</p>
 		</div>
-		<div id="fbox3"> <img src="images/pic06.jpg" width="235" height="235" alt="" />
-			<h2>Fusce ultrices fringilla</h2>
+		<div id="fbox3"> <img src="{% static 'images/pic06.jpg' %}" width="235" height="235" alt="" />
+			<h2>Illya Bereza</h2>
 			<p>Donec fermentum nibh in augue a lacus at urna congue rutrum.</p>
 		</div>
-		<div id="fbox4"> <img src="images/pic07.jpg" width="235" height="235" alt="" />
-			<h2>Fusce ultrices fringilla</h2>
+		<div id="fbox4"> <img src="{% static 'images/pic07.png' %}" width="235" height="235" alt="" />
+			<h2>Alexey Repkin</h2>
 			<p>Suspendisse sit amet tellus eros bibendum volutpat nulla.</p>
 		</div>
 	</div>
 </div>
+{% endblock blockname %}
 <div id="footer">
-	<p>All rights reserved.  Photos by Fotograph <a href="#">FCT</a>.</p>
+	<p>All rights reserved.  Photos by Fotograph <a href="https://vk.com/donntu_fknt">Group</a>.</p>
 </div>
 </body>
 </html>
