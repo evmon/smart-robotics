@@ -8,14 +8,14 @@ body
 {
 	margin: 0px;
 	padding: 0px;
-	background: #219653;
+	/*background: #219653;*/
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	color: #fff;
+	color: #6e6d6d;
 }
 .buttonText
 {
-	font: 18px/1.5 Helvetica, Arial, sans-serif;
+	/*font: 18px/1.5 Helvetica, Arial, sans-serif;*/
   color: #fff
 }
 h1, h2, h3
@@ -23,7 +23,7 @@ h1, h2, h3
 	margin: 0;
 	padding: 0;
 	font-family: 'Archivo Narrow', sans-serif;
-	color: #219653;
+	color: #009688;
 }
 
 p, ol, ul
@@ -49,7 +49,7 @@ strong
 
 a
 {
-	color: #219653;
+	color: #009688;
 	text-decoration: none;
 }
 
@@ -125,7 +125,7 @@ ul.style1 .first
 
 #wrapper
 {
-	background: #272D3B;
+	background: #fff;
 }
 
 .container
@@ -145,8 +145,8 @@ ul.style1 .first
 {
 	overflow: hidden;
 	height: 150px;
-	background: #219653;
-	border-bottom: 1px solid #3B3B3A;
+	background: #009688;
+	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
 
 #header
@@ -200,7 +200,7 @@ ul.style1 .first
 	float: right;
 	margin: 0px;
 	padding: 0px;
-	background: #219653;
+	background: #009688;
 	list-style: none;
 	line-height: normal;
 }
@@ -208,13 +208,14 @@ ul.style1 .first
 #menu li
 {
 	float: left;
-	padding: 1.6em 2em 1.6em 2em;
+	/*padding: 1.6em 2em 1.6em 2em;*/
 }
 #menu li:hover
 {
 	float: left;
-	margin-top: 0.2em;
-	padding-bottom: 1.8em 2em;
+	/*margin-top: 0.2em;*/
+	/*padding-bottom: 1.8em 2em;*/
+	background: #E5E5E5;
 
 }
 #menu a
@@ -230,7 +231,7 @@ ul.style1 .first
 
 #menu a:hover
 {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 #menu .active a
@@ -240,10 +241,11 @@ ul.style1 .first
 
 #menu .first
 {
+
 	background: #FFFFFF;
 	border-left: none;
 	box-shadow: none;
-	color: #219653;
+	color: #009688;
 }
 
 /** PAGE */
@@ -261,7 +263,7 @@ ul.style1 .first
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	font-size: 2em;
-	color: #219653;
+	color: #009688;
 }
 
 /** CONTENT */
@@ -302,7 +304,7 @@ ul.style1 .first
 #footer
 {
 	overflow: hidden;
-	padding: 3em 0em;
+	padding: 2em 0em;
 }
 
 #footer p
@@ -323,8 +325,8 @@ ul.style1 .first
 #banner
 {
 	overflow: hidden;
-	padding: 50px 0px;
-	background: #272D3B;
+	padding: 20px 0px;
+	/*background: #fff;*/
 	
 }
 #button2{  
@@ -436,8 +438,8 @@ ul.style1 .first
 #slider .indicator ul li
 {
 	display: inline-block;
-	width: 12px;
-	height: 12px;
+	width: 6px;
+	height: 6px;
 	text-indent: -9999em;
 	background: #c8c8c8;
 	margin: 0 2px 0 2px;
@@ -448,14 +450,14 @@ ul.style1 .first
 
 #slider .indicator ul li.active
 {
-	background: #219653;
-	border-top: solid 1px #219653;
+	background: #009688;
+	border-top: solid 1px #009688;
 }
 
 #featured
 {
 	overflow: hidden;
-	padding: 50px 0px;
+	padding: 20px 0px;
 	
 }
 
@@ -502,15 +504,53 @@ ul.style1 .first
 	font-size: 1.00em;
 	font-weight: 700;
 	font-family: 'Open Sans', sans-serif;
-	color: #219653;
+	color: #009688;
 }
 
 #featured .title 
 {
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	border-top: 1px solid #D8D8D8;
 	border-bottom: 1px solid #D8D8D8;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 2.50em;
-	color: #219653 !important;
+	color: #009688 !important;
 }
+#navbar a {
+        color: #fff;
+        padding: 1.3em 1.4em 1.3em 1.4em;
+       
+        text-decoration: none;
+ 
+      }
+
+#navbar {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+        
+      }
+#navbar a:hover {
+        
+        color: #088674;
+      }
+#navbar li { display: inline; }
+
+/*.movement{
+	text-align: left;
+	font-size: 2em;
+	padding: 5px 0px 20px;
+	text-transform: capitalize;
+}*/
+
+.sub-menu 
+{ 
+   display: none; 
+} 
+.main-item:focus ~ .sub-menu, 
+.main-item:active ~ .sub-menu, 
+.sub-menu:hover 
+{ 
+   display: block; 
+} 

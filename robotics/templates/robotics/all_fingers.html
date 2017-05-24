@@ -1,0 +1,89 @@
+{% extends 'robotics/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+<div id="banner"> 
+   
+	<div id="featured" style="padding: 0px 0px;" class="container" >
+
+	    <h2 class="title">Choose the movement</h2>
+	    <div id="sidebar">
+			<div>
+				<h2>Specification</h2>
+				<ul class="style1">
+					<li class="first">
+						<p><a href="#">Ipsum ante vivamus semper faucibus varius. Nam risus nibh, commodo vulputate.</a></p>
+						</li>
+					<li>
+						<p><a href="#">Sed amet consequat lorem ipsum dolor sit amet blandit feugiat lorem ipsum sed ante nibh.</a></p>
+						 </li>
+				</ul>
+			</div>
+		</div>
+	    <ul id="menu1">
+	    	<div id="page"   style="padding-bottom: 10px; padding-top: 10px; ">
+				<div id="content"> 
+					<img src="{% static 'images/left.ico' %}" style="margin-right: 20px;margin-top: 15px;" width="16" height="16" alt="" />
+					<li ><span>
+						<h2 style="cursor: pointer; text-align: left; font-size: 2em; padding: 5px 0px 20px; text-transform: capitalize;">Take</h2>
+						</span>
+						
+							   <ul>
+							   <form onsubmit="return false" oninput="sizePic1()" action="" method="post">
+							   		<li style="margin-top: 10px; margin-right: 40%; float:right; margin-bottom: 10px;">
+							   		<div>
+							   			<label for="your_name">Compression / decompression ratio: </label>
+							   			</div>
+							   		<div>
+							   			<input style="margin-top: 20px; width: 200px;" type="range" id="slider1" value="0" min="-20" max="20" step="1" onchange="showSliderValue1()"><input style="margin-top: 20px; width: 20px; float:right; " type="text" id="text1" value="0">
+							   		</div>
+							   		
+							   		</li>
+							   		
+									<li style="margin-top: 10px; margin-right: 40%; float:right; margin-bottom: 10px;">
+
+									    <input type="submit" value="OK" >
+									</li>
+								</form>
+							   </ul>
+						   
+					</li>
+				</div>
+			</div>
+	    	<div id="page"  style="padding-top: 10px; ">
+				<div id="content"> 
+					<img src="{% static 'images/left.ico' %}" style="margin-right: 20px;margin-top: 15px;" width="16" height="16" alt="" />
+					<li ><span>
+						<h2 style="cursor: pointer; text-align: left; font-size: 2em; padding: 5px 0px 0px; text-transform: capitalize;">Set free</h2>
+						</span>
+						
+							   <ul>
+							   <form onsubmit="return false" oninput="sizePic2()" action="" method="post">
+							   		<li style="margin-top: 10px; margin-right: 40%; float:right; margin-bottom: 10px;">
+							   		<div>
+							   			<label for="your_name">Compression / decompression ratio: </label>
+							   			</div>
+							   		<div>
+							   			<input style="margin-top: 20px; width: 200px;" type="range" id="slider2" value="0" min="-20" max="20" step="1" onchange="showSliderValue2()"><input style="margin-top: 20px; width: 20px; float:right; " value="0" type="text" id="text2">
+							   		</div>
+							   		
+							   		</li>
+							   		
+									<li style="margin-top: 10px; margin-right: 40%; float:right; margin-bottom: 10px;">
+
+									    <input type="submit" value="OK" >
+									</li>
+								</form>
+							   </ul>
+						   
+					</li>
+				</div>
+			</div>
+			
+		</ul>
+					
+		</div>
+	
+</div>
+{% endblock content %}

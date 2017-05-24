@@ -13,6 +13,9 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="robotics/base.html"), name='home'),
     url(r'^about-us/$', TemplateView.as_view(template_name="robotics/about-us.html"), name='about-us'),
     url(r'^contact-us/$', TemplateView.as_view(template_name="robotics/contact-us.html"), name='contact-us'),
+    url(r'^control/$', TemplateView.as_view(template_name="robotics/control.html"), name='control'),
+    url(r'^control/simple/$', TemplateView.as_view(template_name="robotics/fingers.html"), name='simple'),
+    url(r'^control/coordinated/$', TemplateView.as_view(template_name="robotics/all_fingers.html"), name='all-fingers'),
         
 ]
 

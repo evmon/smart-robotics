@@ -9,6 +9,12 @@
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+
 
 <script src="{% static 'jquery-1.7.1.min.js' %}"></script>
 
@@ -16,29 +22,99 @@
 
 <script type="text/javascript" src="{% static 'jquery.slidertron-1.1.js' %}"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Archivo+Narrow:400,700" rel="stylesheet" type="text/css" />
+<script>
+   function sizePic1() {
+    size = document.getElementById("size1").value;
+   
+  }
+
+</script>
+<script >
+	function showSliderValue1() {
+		var sliderValue = document.getElementById("slider1").value;
+		var text = document.getElementById("text1");
+		text.value = sliderValue;
+}
+</script>
+<script>
+   function sizePic2() {
+    size = document.getElementById("size2").value;
+   
+  }
+
+</script>
+<script >
+	function showSliderValue2() {
+		var sliderValue = document.getElementById("slider2").value;
+		var text = document.getElementById("text2");
+		text.value = sliderValue;
+}
+</script>
+<script>
+   function sizePic3() {
+    size = document.getElementById("size3").value;
+   
+  }
+
+</script>
+<script >
+	function showSliderValue3() {
+		var sliderValue = document.getElementById("slider3").value;
+		var text = document.getElementById("text3");
+		text.value = sliderValue;
+}
+</script>
+<script>
+   function sizePic4() {
+    size = document.getElementById("size4").value;
+   
+  }
+
+</script>
+<script >
+	function showSliderValue4() {
+		var sliderValue = document.getElementById("slider4").value;
+		var text = document.getElementById("text4");
+		text.value = sliderValue;
+}
+</script>
+<script>
+   function sizePic5() {
+    size = document.getElementById("size5").value;
+   
+  }
+
+</script>
+<script >
+	function showSliderValue5() {
+		var sliderValue = document.getElementById("slider5").value;
+		var text = document.getElementById("text5");
+		text.value = sliderValue;
+}
+</script>
 </head>
 <body>
-<div id="header-wrapper">
+<div id="header-wrapper" >
 	<div id="header" class="container">
 		<div id="logo">
 			<h1><a href="{%url 'robotics:home' %}">Smart Group</a></h1>
 		</div>
 		<div id="menu">
-			<ul>
+			<ul id="navbar">
 				<li class="first active"><a class="buttonText" id="button2" href="{%url 'robotics:home' %}" accesskey="1" title="">Homepage</a></li>
-				<li><a type="button" href="#" accesskey="2" title="">Control</a></li>
+				<li><a type="button" href="{% url 'robotics:control' %}" accesskey="2" title="">Control</a></li>
 				<li><a href="{% url 'robotics:about-us' %}" accesskey="3" title="">About Us</a></li>
 				<li><a href="{% url 'robotics:contact-us' %}" accesskey="4" title="">Contact Us</a></li>
 				
 			</ul>
 		</div>
-	</div>
+	</div><h2></h2>
 </div>
 {% block content %}
 	
 
 <div id="banner">
-<div id="featured" style="padding: 0px 0px;" class="container">
+<div id="featured" style="padding: 0px 0px;" class="container1">
 				<h2 class="title">Labor of love</h2>
 			</div>
 	<div id="slider">
@@ -74,8 +150,20 @@
 </div>
 
 {% endblock content %}
-<div id="footer">
+<div id="footer" style="background: rgb(0, 150, 136) none repeat scroll 0% 0%;">
 	<p>All rights reserved © 2017.  Photos by <a href="https://vk.com/donntu_fknt">Group</a>.</p>
 </div>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("#menu1 ul").hide();
+	$("#menu1 li span").click(function() {
+    $("#menu1 ul:visible").slideUp("normal");
+    if (($(this).next().is("ul")) && (!$(this).next().is(":visible"))) {
+        $(this).next().slideDown("normal");
+    }
+	});
+	});
+</script>
+
 </body>
 </html>

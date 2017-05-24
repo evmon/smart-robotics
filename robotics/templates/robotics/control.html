@@ -1,0 +1,42 @@
+{% extends 'robotics/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %} 
+<div id="banner">     
+	<div id="featured" style="padding: 0px 0px;" class="container">
+	    <h2 class="title">Choose the movement</h2>
+	    <div id="sidebar">
+			<div>
+				<h2>Specification</h2>
+				<ul class="style1">
+					<li class="first">
+						<p><a href="#">Ipsum ante vivamus semper faucibus varius. Nam risus nibh, commodo vulputate.</a></p>
+						</li>
+					<li>
+						<p><a href="#">Sed amet consequat lorem ipsum dolor sit amet blandit feugiat lorem ipsum sed ante nibh.</a></p>
+						 </li>
+				</ul>
+			</div>
+		</div>
+
+			<div id="page" style="padding-bottom: 50px; width: 300px;">
+				<div id="content"> 
+					<a href="{%url 'robotics:simple' %}" title="Manage each individual finger.">
+						<img src="{% static 'images/one.ico' %}" width="35" height="35" alt="" />
+							<h2 style="text-align: left; font-size: 2em; padding: 5px 0px 20px; text-transform: capitalize;">Simple</h2></a>
+							
+				</div>	
+			</div>
+			<div id="page"   style="padding: 0px 0px 0px 0px; width: 300px;">
+				<div id="content"> 
+					<a title="Control synchronously with all fingers." href="{%url 'robotics:all-fingers' %}">
+						<img src="{% static 'images/all.ico' %}" width="35" height="35" alt="" />
+							<h2 style="text-align: left; font-size: 2em; padding: 5px 0px 20px; text-transform: capitalize;">Coordinated</h2></a>
+							
+				</div>	
+			</div>
+	</div>
+</div>
+{% endblock content %}
+
