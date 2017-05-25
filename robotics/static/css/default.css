@@ -133,7 +133,7 @@ ul.style1 .first
 {
 	width: 1000px;
 	margin: 0px auto;
-	min-height: calc(100vh - 150px);
+	min-height: calc(100vh - 40px);
 }
 .container1
 {
@@ -313,7 +313,10 @@ ul.style1 .first
 /* Footer */
 
 #footer
-{
+{	left: 0px;
+right: 0px;
+bottom: 0px;
+position: absolute;
 	overflow: hidden;
 	padding: 2em 0em;
 }
