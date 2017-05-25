@@ -316,7 +316,7 @@ ul.style1 .first
 {	left: 0px;
 right: 0px;
 bottom: 0px;
-position: absolute;
+/*position: absolute;*/
 	overflow: hidden;
 	padding: 2em 0em;
 }
