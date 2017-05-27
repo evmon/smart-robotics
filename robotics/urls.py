@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
+from .views import List
 
 app_name = 'robotics'
 # handler404 = 'show_404'
@@ -16,7 +17,7 @@ urlpatterns = [
     url(r'^control/$', TemplateView.as_view(template_name="robotics/control.html"), name='control'),
     url(r'^control/simple/$', TemplateView.as_view(template_name="robotics/fingers.html"), name='simple'),
     url(r'^control/coordinated/$', TemplateView.as_view(template_name="robotics/all_fingers.html"), name='all-fingers'),
-        
+    url(r'^list/', List.as_view(template_name="robotics/requests.html"), name='list'),   
 ]
 
 
