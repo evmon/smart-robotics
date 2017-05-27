@@ -1,0 +1,15 @@
+{% extends 'robotics/base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block content %}
+<div id="banner">     
+	<div id="featured" class="container">
+	    <h2 class="title">Requests</h2>
+
+        {% for i in list %}
+         <p style="text-align: left;">{{ i }}</p>
+        {% endfor %}
+</div></div>
+{% endblock %}
