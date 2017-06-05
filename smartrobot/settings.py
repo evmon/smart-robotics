@@ -26,7 +26,7 @@ SECRET_KEY = '7ekh%x+izr*b*f719e#&8q4yx!0bvaq##-q@y7-$uq(%dx5hlo'
 # DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['smart.pythonanywhere.com']
 # ALLOWED_HOSTS = []
 
 # Application definition

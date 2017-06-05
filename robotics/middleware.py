@@ -1,22 +1,22 @@
-# from .models import PostRequest
+from .models import PostRequest
 
 
-# class SimpleMiddleware(object):
+class SimpleMiddleware(object):
 
-#     def __init__(self, get_response):
+    def __init__(self, get_response):
     	
-#         self.get_response = get_response
+        self.get_response = get_response
 
-#         # one-time configuration and initialization
+        # one-time configuration and initialization
 
-#     def __call__(self, request):
+    def __call__(self, request):
         
-#         info = 'Method: ' + str(request.method) + \
-#         	   ', Full path: ' + str(request.get_full_path()) + \
-#         	   ', HOST: '+ str(request.get_host())
+        info = 'Method: ' + str(request.method) + \
+        	   ', Full path: ' + str(request.get_full_path()) + \
+        	   ', HOST: '+ str(request.get_host())
                
-#         if request.method == "POST":
-#             PostRequest.objects.create(request=info)
+        if request.method == "POST":
+            PostRequest.objects.create(request=info)
 
-#         response = self.get_response(request)
-#         return response
+        response = self.get_response(request)
+        return response
