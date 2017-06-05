@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7ekh%x+izr*b*f719e#&8q4yx!0bvaq##-q@y7-$uq(%dx5hlo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'robotics.middleware.SimpleMiddleware',
 ]
 
 ROOT_URLCONF = 'smartrobot.urls'
@@ -77,17 +78,17 @@ WSGI_APPLICATION = 'smartrobot.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'smart$smartrobotics',
-        'USER': 'smart',
-        'PASSWORD': 'evmonrobot',
-        'HOST': 'smart.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'smart$smartrobotics',
+        # 'USER': 'smart',
+        # 'PASSWORD': 'evmonrobot',
+        # 'HOST': 'smart.mysql.pythonanywhere-services.com',
+        # 'PORT': '3306',
+        # 'OPTIONS': {
+        #     'sql_mode': 'traditional',
+        # },
     }
 }
 

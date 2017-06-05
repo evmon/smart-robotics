@@ -1,4 +1,4 @@
-from .models import Request
+from .models import PostRequest
 
 
 class SimpleMiddleware(object):
@@ -11,10 +11,12 @@ class SimpleMiddleware(object):
 
     def __call__(self, request):
         
-        Request.objects.create(request=request)
+        info = 'Method: ' + str(request.method) + \
+        	   ', Full path: ' + str(request.get_full_path()) + \
+        	   ', HOST: '+ str(request.get_host())
+               
+        if request.method == "POST":
+            PostRequest.objects.create(request=info)
 
         response = self.get_response(request)
-
         return response
-
-

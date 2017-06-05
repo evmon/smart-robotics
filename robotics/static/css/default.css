@@ -2,10 +2,16 @@
 html, body
 {
 	height: 100%;
+	
 }
 
 body
 {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+
+	overflow-y: scroll;
 	margin: 0px;
 	padding: 0px;
 	/*background: #219653;*/
@@ -13,7 +19,7 @@ body
 	font-size: 13px;
 	color: #6e6d6d;
 	/*height: 100%;*/
-	height: 100%;
+	
  
 }
 .buttonText
@@ -136,7 +142,7 @@ ul.style1 .first
 	width: 1000px;
 	margin: 0px auto;
 	min-height: 100%;
-	min-height: calc(100vh - 150px - 9.9em);
+	/*min-height: calc(100vh - 150px - 9.9em);*/
 	/*margin-bottom: -50px;*/
 }
 .container1
@@ -154,8 +160,8 @@ ul.style1 .first
 /** HEADER */
 
 #header-wrapper
-{
-	overflow: hidden;
+{	
+
 	height: 150px;
 	background: #009688;
 	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
@@ -163,7 +169,7 @@ ul.style1 .first
 
 #header
 {
-	overflow: hidden;
+	
 }
 
 /** LOGO */
@@ -220,13 +226,12 @@ ul.style1 .first
 #menu li
 {
 	float: left;
-	/*padding: 1.6em 2em 1.6em 2em;*/
+	
 }
 #menu li:hover
 {
 	float: left;
-	/*margin-top: 0.2em;*/
-	/*padding-bottom: 1.8em 2em;*/
+	
 	background: #E5E5E5;
 
 }
@@ -243,7 +248,7 @@ ul.style1 .first
 
 #menu a:hover
 {
-	/*text-decoration: underline;*/
+	
 }
 
 #menu .active a
@@ -283,7 +288,7 @@ ul.style1 .first
 #content
 {
 	box-sizing: border-box;
-  	/*min-height: 100%;*/
+  	
 	float: left;
 	width: 650px;
 	
@@ -318,9 +323,10 @@ ul.style1 .first
 
 #footer
 {	
+	
 	overflow: hidden;
 	padding: 2em 0em;
-	
+	flex: 0 0 auto;
 }
 
 #footer p
@@ -340,6 +346,8 @@ ul.style1 .first
 
 #banner
 {
+	flex: 1 0 auto;
+
 	overflow: hidden;
 	padding: 20px 0px;
 	/*background: #fff;*/
@@ -553,62 +561,6 @@ ul.style1 .first
       }
 #navbar li { display: inline; }
 
-/*.movement{
-	text-align: left;
-	font-size: 2em;
-	padding: 5px 0px 20px;
-	text-transform: capitalize;
-}*/
-
-/*.sub-menu 
-{ 
-   display: none; 
-} 
-.main-item:focus ~ .sub-menu, 
-.main-item:active ~ .sub-menu, 
-.sub-menu:hover 
-{ 
-   display: block; 
-} */
-
-ul#menu1, ul#menu1 ul {
-  /*list-style-type:none;*/
-  /*margin: 0px;*/
-  /*padding: 0px;*/
-  /*width: 250px;*/
-}
-
-ul#menu1 a,ul#menu1 span { 
-	/*display: block; */
-	/*text-decoration: none; */
-}
-
-ul#menu1 li {
- /*margin-top: 1px;*/
-}
-
-ul#menu1 li a,ul#menu1 li span {
-  /*background: #333333;*/
-  /*color: #FFFFFF;*/
-  /*padding: 7px;*/
-}
-
-ul#menu1 li a:hover,ul#menu1 li span:hover { 
-	/*background: #000000;*/
-	 }
-
-ul#menu1 li ul li a {
-  /*background: #CCCCCC;*/
-  /*color: #000000;*/
-  /*padding-left: 20px;*/
-}
-
-ul#menu1 li ul li a:hover {
-  /*background: #AAAAAA;*/
-  /*border-left: 5px #000000 solid;*/
-  /*padding-left: 15px;*/
-}
-
 #custom-handle {
     width: 3em;
     height: 1.6em;
@@ -637,9 +589,69 @@ input[type="submit"]:hover {
 }
 
 input[type="text1"] {
-	border:1px solid #fff;
-	background-color: #fff;
-	color: #009688;
+	border:1px solid #009688;
+	background-color: #009688;
+	color: #fff;
     padding: .1em .4em .1em .4em;
     text-decoration: none;
+}
+
+@media screen and (min-width: 500px) { 
+  html {
+    margin-left: 0;
+
+    margin-right: 0;
+  }
+}
+
+/* The CSS */
+select {
+    padding:3px;
+    margin: 0;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#009688;
+    border:none;
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    cursor:pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:'<>';
+    font:11px "Consolas", monospace;
+    color:#aaa;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:6px; top:0px;
+    width:25px; height:25px;
+    background:#f8f8f8;
+    position:absolute;
+    pointer-events:none;
+    display:block;
 }

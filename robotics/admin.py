@@ -3,10 +3,11 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import Message, TemperatureBeforeMovement, Movement, Request
+from .models import Message, SimpleMovement, CoordinatedMovement, PostRequest
 
 # Register models
-admin.site.register(Movement)
+admin.site.register(SimpleMovement)
+admin.site.register(CoordinatedMovement)
 admin.site.register(Message)
-admin.site.register(Request)
-admin.site.register(TemperatureBeforeMovement)
+admin.site.register(PostRequest)
+# admin.site.register(TemperatureBeforeMovement)
